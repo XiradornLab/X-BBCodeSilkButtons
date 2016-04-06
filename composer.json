@@ -1,7 +1,7 @@
 {
    "name": "xiradorn/xbbcodesilkbtn",
    "type": "phpbb-extension",
-   "description": "Modifica il bbcode con con delle icone al posto del normale testo",
+   "description": "BBcode Buttons with silk image icon from famfamfam and a selectbox for custom bbcodes",
    "homepage": "http://xiradorn.it",
    "version": "1.0.0",
    "time": "2016-04-05",
@@ -30,7 +30,7 @@
       },
       "version-check": {
          "host": "xiradorn.it",
-         "directory": "/phpbb_version/_experimental_/navbtn",
+         "directory": "/phpbb_version/xbbcodesilkbtn",
          "filename": "version_check"
       }
    }
