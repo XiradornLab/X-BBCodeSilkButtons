@@ -1,5 +1,5 @@
-#X-BBCode Silk Buttons Extension  
-######Author: Sir Xiradorn
+# X-BBCode Silk Buttons Extension  
+###### Author: Sir Xiradorn
 
 ![Screen][img]
 
@@ -7,7 +7,7 @@ Simple Extension for change normal bbcode button into a grafical bbcode button. 
 
 ----
 
-###Install
+### Install
 Sooo simple! Follow those simple step:
 * Download the last release from this repo and unzip where you want.  
 * Put the files and folder into this path `ext/xiradorn/xbbcodesilkbtn`  
