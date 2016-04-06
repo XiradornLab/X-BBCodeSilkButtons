@@ -17,4 +17,4 @@ Sooo simple! Follow those simple step:
 
 **Boom!**  
 
-[img]: ../../contrib/screen.jpg "Screen Image"
+[img]: contrib/screen.jpg "Screen Image"
