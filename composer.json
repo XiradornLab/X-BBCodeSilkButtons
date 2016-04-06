@@ -26,7 +26,7 @@
    "extra": {
       "display-name": "X-BBcode Silk Buttons",
       "soft-require" : {
-         "phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+         "phpbb/phpbb": ">=3.1.0-RC2"
       },
       "version-check": {
          "host": "xiradorn.it",
