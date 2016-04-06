@@ -1,5 +1,4 @@
 #X-BBCode Silk Buttons Extension  
-####Conversion ModToExt from the Original Mod build by Stoker
 ######Author: Sir Xiradorn
 
 ![Screen][img]
