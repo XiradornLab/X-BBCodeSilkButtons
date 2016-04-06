@@ -1,0 +1,114 @@
+-->
+<script type="text/javascript">
+// <![CDATA[
+	var form_name = 'postform';
+	var text_name = <!-- IF $SIG_EDIT -->'signature'<!-- ELSE -->'message'<!-- ENDIF -->;
+	var load_draft = false;
+	var upload = false;
+
+	// Define the bbCode tags
+	var bbcode = new Array();
+	var bbtags = new Array('[b]','[/b]','[i]','[/i]','[u]','[/u]','[quote]','[/quote]','[code]','[/code]','[list]','[/list]','[list=]','[/list]','[img]','[/img]','[url]','[/url]','[flash=]', '[/flash]','[size=]','[/size]'<!-- BEGIN custom_tags -->, {custom_tags.BBCODE_NAME}<!-- END custom_tags -->);
+	var imageTag = false;
+
+	// Helpline messages
+	var help_line = {
+		b: '{LA_BBCODE_B_HELP}',
+		i: '{LA_BBCODE_I_HELP}',
+		u: '{LA_BBCODE_U_HELP}',
+		q: '{LA_BBCODE_Q_HELP}',
+		c: '{LA_BBCODE_C_HELP}',
+		l: '{LA_BBCODE_L_HELP}',
+		li: '{LA_BBCODE_LISTITEM_HELP}',
+		o: '{LA_BBCODE_O_HELP}',
+		p: '{LA_BBCODE_P_HELP}',
+		w: '{LA_BBCODE_W_HELP}',
+		a: '{LA_BBCODE_A_HELP}',
+		s: '{LA_BBCODE_S_HELP}',
+		f: '{LA_BBCODE_F_HELP}',
+		y: '{LA_BBCODE_Y_HELP}',
+		d: '{LA_BBCODE_D_HELP}',
+		bbc: 'BBCode Personalizzati', 
+		tip: 'BBCode Helpline',
+		ft: '[size=50]{L_FONT_TINY}[/size]',
+		fs: '[size=85]{L_FONT_SMALL}[/size]',
+		fn: '[size=100]{L_FONT_NORMAL}[/size]',
+		fl: '[size=150]{L_FONT_LARGE}[/size]',
+		fh: '[size=200]{L_FONT_HUGE}[/size]'
+		<!-- BEGIN custom_tags -->
+			,cb_{custom_tags.BBCODE_ID}: '{custom_tags.A_BBCODE_HELPLINE}'
+		<!-- END custom_tags -->
+	}
+
+	function change_palette()
+	{
+		phpbb.toggleDisplay('colour_palette');
+		e = document.getElementById('colour_palette');
+
+		/*if (e.style.display == 'block')
+		{
+			document.getElementById('bbpalette').value = '{LA_FONT_COLOR_HIDE}';
+		}
+		else
+		{
+			document.getElementById('bbpalette').value = '{LA_FONT_COLOR}';
+		}*/
+	}
+
+// ]]>
+</script>
+<!-- INCLUDEJS {T_ASSETS_PATH}/javascript/editor.js -->
+
+<!-- IF S_BBCODE_ALLOWED -->
+<div id="colour_palette" style="display: none;">
+	<dl style="clear: left;">
+		<dt><label>{L_FONT_COLOR}{L_COLON}</label></dt>
+		<dd id="color_palette_placeholder" data-orientation="h" data-height="12" data-width="15" data-bbcode="true"></dd>
+	</dl>
+</div>
+
+<div id="format-buttons">
+	<input type="text" readonly="readonly" name="helpbox" value="BBCode Helpline" class="bbcode_helpline" />
+
+	<input type="button" class="button2 bbcode-b" accesskey="b" name="addbbcode0" value=" B " onclick="bbstyle(0)" title="{L_BBCODE_B_HELP}" onmouseover="helpline('b')" onmouseout="helpline('tip')" />
+	<input type="button" class="button2 bbcode-i" accesskey="i" name="addbbcode2" value=" i " onclick="bbstyle(2)" title="{L_BBCODE_I_HELP}" onmouseover="helpline('i')" onmouseout="helpline('tip')" />
+	<input type="button" class="button2 bbcode-u" accesskey="u" name="addbbcode4" value=" u " onclick="bbstyle(4)" title="{L_BBCODE_U_HELP}" onmouseover="helpline('u')" onmouseout="helpline('tip')" />
+	<!-- IF S_BBCODE_QUOTE -->
+		<input type="button" class="button2 bbcode-quote" accesskey="q" name="addbbcode6" value="Quote" onclick="bbstyle(6)" title="{L_BBCODE_Q_HELP}" onmouseover="helpline('q')" onmouseout="helpline('tip')" />
+	<!-- ENDIF -->
+	<input type="button" class="button2 bbcode-code" accesskey="c" name="addbbcode8" value="Code" onclick="bbstyle(8)" title="{L_BBCODE_C_HELP}" onmouseover="helpline('c')" onmouseout="helpline('tip')" />
+	<input type="button" class="button2 bbcode-list" accesskey="l" name="addbbcode10" value="List" onclick="bbstyle(10)" title="{L_BBCODE_L_HELP}" onmouseover="helpline('l')" onmouseout="helpline('tip')" />
+	<input type="button" class="button2 bbcode-list-" accesskey="o" name="addbbcode12" value="List=" onclick="bbstyle(12)" title="{L_BBCODE_O_HELP}" onmouseover="helpline('o')" onmouseout="helpline('tip')" />
+	<input type="button" class="button2 bbcode-asterisk" accesskey="y" name="addlistitem" value="[*]" onclick="bbstyle(-1)" title="{L_BBCODE_LISTITEM_HELP}" onmouseover="helpline('y')" onmouseout="helpline('tip')" />
+	<!-- IF S_BBCODE_IMG -->
+		<input type="button" class="button2 bbcode-img" accesskey="p" name="addbbcode14" value="Img" onclick="bbstyle(14)" title="{L_BBCODE_P_HELP}" onmouseover="helpline('p')" onmouseout="helpline('tip')" />
+	<!-- ENDIF -->
+	<!-- IF S_LINKS_ALLOWED -->
+		<input type="button" class="button2 bbcode-url" accesskey="w" name="addbbcode16" value="URL" onclick="bbstyle(16)" title="{L_BBCODE_W_HELP}" onmouseover="helpline('w')" onmouseout="helpline('tip')" />
+	<!-- ENDIF -->
+	<!-- IF S_BBCODE_FLASH -->
+		<input type="button" class="button2 bbcode-flash" accesskey="d" name="addbbcode18" value="Flash" onclick="bbstyle(18)" title="{L_BBCODE_D_HELP}" onmouseover="helpline('d')" onmouseout="helpline('tip')" />
+	<!-- ENDIF -->
+	<select name="addbbcode20" class="bbcode-size" onchange="bbfontstyle('[size=' + this.form.addbbcode20.options[this.form.addbbcode20.selectedIndex].value + ']', '[/size]');this.form.addbbcode20.selectedIndex = 2;" title="{L_BBCODE_F_HELP}">
+		<option value="50" onmouseover="helpline('ft')" onmouseout="helpline('tip')">{L_FONT_TINY}</option>
+		<option value="85" onmouseover="helpline('fs')" onmouseout="helpline('tip')">{L_FONT_SMALL}</option>
+		<option value="100" selected="selected" onmouseover="helpline('fn')" onmouseout="helpline('tip')">{L_FONT_NORMAL}</option>
+		<!-- IF not MAX_FONT_SIZE or MAX_FONT_SIZE >= 150 -->
+			<option value="150" onmouseover="helpline('fl')" onmouseout="helpline('tip')">{L_FONT_LARGE}</option>
+			<!-- IF not MAX_FONT_SIZE or MAX_FONT_SIZE >= 200 -->
+				<option value="200" onmouseover="helpline('fh')" onmouseout="helpline('tip')">{L_FONT_HUGE}</option>
+			<!-- ENDIF -->
+		<!-- ENDIF -->
+	</select>
+
+	<input type="button" class="button2 bbcode-color" name="bbpalette" id="bbpalette" value="{L_FONT_COLOR}" onclick="change_palette();" title="{L_BBCODE_S_HELP}" onmouseover="helpline('s')" onmouseout="helpline('tip')" />
+
+
+	<select name="addbbcode_custom" class="bbcode-size" onchange="bbstyle(this.form.addbbcode_custom.options[this.form.addbbcode_custom.selectedIndex].value*1);this.form.addbbcode_custom.selectedIndex = 0;" title="{L_BBCODE_F_HELP}">
+		<option value="#" title="BBCode Personalizzati" onmouseover="helpline('bbc')" onmouseout="helpline('tip')">BBCode Personalizzati</option>
+		<!-- BEGIN custom_tags -->
+		<option value="{custom_tags.BBCODE_ID}" title="{custom_tags.BBCODE_HELPLINE}" onmouseover="helpline('cb_{custom_tags.BBCODE_ID}')" onmouseout="helpline('tip')" >{custom_tags.BBCODE_TAG}</option>
+		<!-- END custom_tags -->
+	</select>
+</div>
+<!-- ENDIF -->

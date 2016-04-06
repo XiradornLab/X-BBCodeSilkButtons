@@ -1,0 +1,45 @@
+$dim: 24px;
+$bbcode_list: ('b', 'i', 'u', 'quote', 'code', 'list', 'list-', 'asterisk', 'img', 'url', 'flash', 'color')
+$bbcode_box_bg: #D3DBE2
+
+#x-bbcode-hide
+	display: none !important
+
+#format-buttons 
+	background:
+		color: lighten($bbcode_box_bg, 5%)
+	border: 1px solid darken($bbcode_box_bg, 20%) !important
+	padding: 10px
+
+	input
+		&.button2
+			&.bbcode-b, &.bbcode-i, &.bbcode-u, &.bbcode-quote, 
+			&.bbcode-code, &.bbcode-list, &.bbcode-list-, &.bbcode-asterisk, 
+			&.bbcode-img, &.bbcode-url, &.bbcode-flash, &.bbcode-color
+				display: inline-block
+				width: $dim !important
+				height: $dim !important
+				text-indent: -99999px;
+				background:
+					color: #fdfdfd !important
+					position: center center !important
+					repeat: no-repeat !important
+
+			@each $bbcode in $bbcode_list
+				&.bbcode-#{$bbcode}
+					background:
+						image: url('images/#{$bbcode}.png');
+	
+	select
+		height: 24px
+
+	.bbcode_helpline 
+		display: block
+		max-width: 79%
+		width: 100%
+		padding: 5px
+		border: 1px solid #b4bac0 !important
+		margin-bottom: 5px
+
+		@media all and (max-width:700px) 
+			max-width: 96%

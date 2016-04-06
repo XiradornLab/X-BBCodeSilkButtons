@@ -1,0 +1,37 @@
+{
+   "name": "xiradorn/xbbcodesilkbtn",
+   "type": "phpbb-extension",
+   "description": "Modifica il bbcode con con delle icone al posto del normale testo",
+   "homepage": "http://xiradorn.it",
+   "version": "1.0.0",
+   "time": "2016-04-05",
+   "keywords": [
+		"phpbb",
+		"extension",
+		"bbcode",
+      "silk",
+      "button"
+	],
+   "license": "GPL-2.0",
+   "authors": [{
+      "name": "Sir Xiradorn",
+      "email": "helper@stargate.xiradorn.it",
+      "homepage": "http://xiradorn.it",
+      "role": "Lead Developer"
+   }],
+   "require": {
+      "php": ">=5.3.3",
+      "composer/installers": "~1.0"
+   },
+   "extra": {
+      "display-name": "X-BBcode Silk Buttons",
+      "soft-require" : {
+         "phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+      },
+      "version-check": {
+         "host": "xiradorn.it",
+         "directory": "/phpbb_version/_experimental_/navbtn",
+         "filename": "version_check"
+      }
+   }
+}
