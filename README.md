@@ -1,7 +1,12 @@
 # X-BBcode Silk Buttons
 **Extension Version:** 1.2.0  
 
-**Description:** Turn normal bbcode button into graphical silk buttons. The Extension also provide to group custom bbcodes into selectbox for a better choise. Last but not least an helpline input show the bbcode help message on hover.  
+![screen1](contrib/screen.jpg "screen1")
+
+on mChat extension  
+![screen2](contrib/screen2.jpg "screen2")
+
+**Description:** Turn normal bbcode button into graphical silk buttons. The Extension also provide to group custom bbcodes into selectbox for a better choise. Last but not least an helpline input show the bbcode help message on hover. It's a cosmetic ext with zero impact on databse.  
 Inspired from the original Idea build by Stoker Mod.  
 
 **Author:** [Sir Xiradorn](https://www.phpbb.com/community/memberlist.php?mode=viewprofile&un=Sir%20Xiradorn "Sir Xiradorn")
