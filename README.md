@@ -1,5 +1,5 @@
 # X-BBcode Silk Buttons
-**Extension Version:** 1.2.0  
+**Extension Version:** 1.3.0  
 
 ![screen1](contrib/screen.jpg "screen1")
 
