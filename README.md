@@ -31,7 +31,7 @@ Inspired from the original Idea build by Stoker Mod.
 * Download the latest release from (https://github.com/XiradornLab/phpbb_xbbcodesilkbtn/releases).
 * Unzip the downloaded release, and change the name of the folder to `xbbcodesilkbtn`.
 * In the `ext` directory of your phpBB board, create a new directory named `xiradorn` (if it does not already exist).
-* Copy the `xbbcodesilkbtn` folder to `/ext/xiradorn/` (if done correctly, you'll have the main extension class at (your forum root)/ext/spaceace/ajaxchat/composer.json).
+* Copy the `xbbcodesilkbtn` folder to `/ext/xiradorn/` (if done correctly, you'll have the main extension class at (your forum root)/ext/xiradorn/xbbcodesilkbtn/composer.json).
 * Navigate in the ACP to `Customise -> Manage extensions`.
 * Look for `X-BBcode Silk Buttons` under the Disabled Extensions list, and click its `Enable` link.[/list]
 
