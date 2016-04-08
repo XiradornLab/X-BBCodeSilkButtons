@@ -1,37 +1,37 @@
 {
-   "name": "xiradorn/xbbcodesilkbtn",
-   "type": "phpbb-extension",
-   "description": "BBcode Buttons with silk image icon from famfamfam and a selectbox for custom bbcodes",
-   "homepage": "http://xiradorn.it",
-   "version": "1.3.0",
-   "time": "2016-04-05",
-   "keywords": [
-      "phpbb",
-      "extension",
-      "bbcode",
-      "silk",
-      "button"
-	],
-   "license": "GPL-2.0",
-   "authors": [{
-      "name": "Sir Xiradorn",
-      "email": "helper@stargate.xiradorn.it",
-      "homepage": "http://xiradorn.it",
-      "role": "Lead Developer"
-   }],
-   "require": {
-      "php": ">=5.3.3",
-      "composer/installers": "~1.0"
-   },
-   "extra": {
-      "display-name": "X-BBcode Silk Buttons",
-      "soft-require" : {
-         "phpbb/phpbb": ">=3.1.0-RC2"
-      },
-      "version-check": {
-         "host": "xiradorn.it",
-         "directory": "/phpbb_version/xbbcodesilkbtn",
-         "filename": "version_check"
-      }
-   }
+    "name": "xiradorn/xbbcodesilkbtn",
+    "type": "phpbb-extension",
+    "description": "BBcode Buttons with silk image icon from famfamfam and a selectbox for custom bbcodes",
+    "homepage": "http://xiradorn.it",
+    "version": "1.3.0",
+    "time": "2016-04-05",
+    "keywords": [
+        "phpbb",
+        "extension",
+        "bbcode",
+        "silk",
+        "button"
+    ],
+    "license": "GPL-2.0",
+    "authors": [{
+        "name": "Sir Xiradorn",
+        "email": "helper@stargate.xiradorn.it",
+        "homepage": "http://xiradorn.it",
+        "role": "Lead Developer"
+    }],
+    "require": {
+        "php": ">=5.3.3",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "display-name": "X-BBcode Silk Buttons",
+        "soft-require" : {
+            "phpbb/phpbb": ">=3.1.0-RC2"
+        },
+        "version-check": {
+            "host": "xiradorn.it",
+            "directory": "/phpbb_version/xbbcodesilkbtn",
+            "filename": "version_check"
+        }
+    }
 }
