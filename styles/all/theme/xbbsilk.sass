@@ -13,17 +13,16 @@ $bbcode_box_bg: #D3DBE2
 
 	input
 		&.button2
-			&.bbcode-b, &.bbcode-i, &.bbcode-u, &.bbcode-quote, 
-			&.bbcode-code, &.bbcode-list, &.bbcode-list-, &.bbcode-asterisk, 
-			&.bbcode-img, &.bbcode-url, &.bbcode-flash, &.bbcode-color
-				display: inline-block
-				width: $dim !important
-				height: $dim !important
-				text-indent: -99999px;
-				background:
-					color: #fdfdfd !important
-					position: center center !important
-					repeat: no-repeat !important
+			@each $bbcode in $bbcode_list
+				&.bbcode-#{$bbcode}
+					display: inline-block
+					width: $dim !important
+					height: $dim !important
+					text-indent: -99999px;
+					background:
+						color: #fdfdfd !important
+						position: center center !important
+						repeat: no-repeat !important
 
 			@each $bbcode in $bbcode_list
 				&.bbcode-#{$bbcode}
