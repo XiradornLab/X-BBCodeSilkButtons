@@ -26,6 +26,7 @@ Inspired from the original Idea build by Stoker Mod.
 * custom bbcode into select box  
 * helpline message on hovering  
 * mChat compatible  
+* AjaxChat compatible  
 
 **Installation:**
 * Download the latest release from (https://github.com/XiradornLab/phpbb_xbbcodesilkbtn/releases).
