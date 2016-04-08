@@ -27,6 +27,7 @@ Inspired from the original Idea build by Stoker Mod.
 * helpline message on hovering  
 * mChat compatible  
 * AjaxChat compatible  
+* Support image for custom bbcode s (strike), hr, sub and sup
 
 **Installation:**
 * Download the latest release from (https://github.com/XiradornLab/phpbb_xbbcodesilkbtn/releases).
