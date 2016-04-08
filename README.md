@@ -1,5 +1,5 @@
 # X-BBcode Silk Buttons
-**Extension Version:** 1.3.0  
+#### Extension Version: 1.4.0  
 
 ![screen1](contrib/screen.jpg "screen1")
 
@@ -29,7 +29,7 @@ Inspired from the original Idea build by Stoker Mod.
 * AjaxChat compatible  
 * Support image for custom bbcode s (strike), hr, sub and sup
 
-**Installation:**
+#### Installation:  
 * Download the latest release from (https://github.com/XiradornLab/phpbb_xbbcodesilkbtn/releases).
 * Unzip the downloaded release, and change the name of the folder to `xbbcodesilkbtn`.
 * In the `ext` directory of your phpBB board, create a new directory named `xiradorn` (if it does not already exist).
@@ -37,7 +37,7 @@ Inspired from the original Idea build by Stoker Mod.
 * Navigate in the ACP to `Customise -> Manage extensions`.
 * Look for `X-BBcode Silk Buttons` under the Disabled Extensions list, and click its `Enable` link.[/list]
 
-**Update Instructions:**  
+#### Update Instructions:  
 * disable the extension
 * delete extension data
 * delete extension files from server
