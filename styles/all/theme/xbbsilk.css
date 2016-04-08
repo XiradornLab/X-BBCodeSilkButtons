@@ -38,6 +38,46 @@
   background-repeat: no-repeat !important;
 }
 
+#format-buttons input.button2.bbcode-s {
+  display: inline-block;
+  width: 24px !important;
+  height: 24px !important;
+  text-indent: -99999px;
+  background-color: #fdfdfd !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+#format-buttons input.button2.bbcode-sup {
+  display: inline-block;
+  width: 24px !important;
+  height: 24px !important;
+  text-indent: -99999px;
+  background-color: #fdfdfd !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+#format-buttons input.button2.bbcode-sub {
+  display: inline-block;
+  width: 24px !important;
+  height: 24px !important;
+  text-indent: -99999px;
+  background-color: #fdfdfd !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+#format-buttons input.button2.bbcode-hr {
+  display: inline-block;
+  width: 24px !important;
+  height: 24px !important;
+  text-indent: -99999px;
+  background-color: #fdfdfd !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
 #format-buttons input.button2.bbcode-quote {
   display: inline-block;
   width: 24px !important;
@@ -138,6 +178,22 @@
 
 #format-buttons input.button2.bbcode-u {
   background-image: url("images/u.png");
+}
+
+#format-buttons input.button2.bbcode-s {
+  background-image: url("images/s.png");
+}
+
+#format-buttons input.button2.bbcode-sup {
+  background-image: url("images/sup.png");
+}
+
+#format-buttons input.button2.bbcode-sub {
+  background-image: url("images/sub.png");
+}
+
+#format-buttons input.button2.bbcode-hr {
+  background-image: url("images/hr.png");
 }
 
 #format-buttons input.button2.bbcode-quote {

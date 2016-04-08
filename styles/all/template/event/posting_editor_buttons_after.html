@@ -47,6 +47,22 @@
 	<input type="button" class="button2 bbcode-b" accesskey="b" name="addbbcode0" value=" B " onclick="bbstyle(0)" title="{L_BBCODE_B_HELP}" onmouseover="helpline('b')" onmouseout="helpline('tip')" />
 	<input type="button" class="button2 bbcode-i" accesskey="i" name="addbbcode2" value=" i " onclick="bbstyle(2)" title="{L_BBCODE_I_HELP}" onmouseover="helpline('i')" onmouseout="helpline('tip')" />
 	<input type="button" class="button2 bbcode-u" accesskey="u" name="addbbcode4" value=" u " onclick="bbstyle(4)" title="{L_BBCODE_U_HELP}" onmouseover="helpline('u')" onmouseout="helpline('tip')" />
+	{% if loops.custom_tags %}
+		{% for custom_tag in loops.custom_tags %}
+			{% if custom_tag.BBCODE_TAG_CLEAN eq 's' %}
+				<input type="button" class="button2 bbcode-{custom_tag.BBCODE_TAG_CLEAN}" name="addbbcode{custom_tag.BBCODE_ID}" value="{custom_tag.BBCODE_TAG}" onclick="bbstyle({custom_tag.BBCODE_ID})" title="{custom_tag.BBCODE_HELPLINE}" onmouseover="helpline('cb_{custom_tag.BBCODE_ID}')" onmouseout="helpline('tip')"  />
+			{% endif %}
+			{% if custom_tag.BBCODE_TAG_CLEAN eq 'sup' %}
+				<input type="button" class="button2 bbcode-{custom_tag.BBCODE_TAG_CLEAN}" name="addbbcode{custom_tag.BBCODE_ID}" value="{custom_tag.BBCODE_TAG}" onclick="bbstyle({custom_tag.BBCODE_ID})" title="{custom_tag.BBCODE_HELPLINE}" onmouseover="helpline('cb_{custom_tag.BBCODE_ID}')" onmouseout="helpline('tip')"  />
+			{% endif %}
+			{% if custom_tag.BBCODE_TAG_CLEAN eq 'sub' %}
+				<input type="button" class="button2 bbcode-{custom_tag.BBCODE_TAG_CLEAN}" name="addbbcode{custom_tag.BBCODE_ID}" value="{custom_tag.BBCODE_TAG}" onclick="bbstyle({custom_tag.BBCODE_ID})" title="{custom_tag.BBCODE_HELPLINE}" onmouseover="helpline('cb_{custom_tag.BBCODE_ID}')" onmouseout="helpline('tip')"  />
+			{% endif %}
+			{% if custom_tag.BBCODE_TAG_CLEAN eq 'hr' %}
+				<input type="button" class="button2 bbcode-{custom_tag.BBCODE_TAG_CLEAN}" name="addbbcode{custom_tag.BBCODE_ID}" value="{custom_tag.BBCODE_TAG}" onclick="bbstyle({custom_tag.BBCODE_ID})" title="{custom_tag.BBCODE_HELPLINE}" onmouseover="helpline('cb_{custom_tag.BBCODE_ID}')" onmouseout="helpline('tip')"  />
+			{% endif %}
+		{% endfor %}
+	{% endif %}
 	{% if S_BBCODE_QUOTE %}
 		<input type="button" class="button2 bbcode-quote" accesskey="q" name="addbbcode6" value="Quote" onclick="bbstyle(6)" title="{L_BBCODE_Q_HELP}" onmouseover="helpline('q')" onmouseout="helpline('tip')" />
 	{% endif %}
