@@ -1,17 +1,7 @@
 -->
 <script type="text/javascript">
 // <![CDATA[
-	var form_name = 'postform';
-	var text_name = <!-- IF $SIG_EDIT -->'signature'<!-- ELSE -->'message'<!-- ENDIF -->;
-	var load_draft = false;
-	var upload = false;
-
-	// Define the bbCode tags
-	var bbcode = new Array();
-	var bbtags = new Array('[b]','[/b]','[i]','[/i]','[u]','[/u]','[quote]','[/quote]','[code]','[/code]','[list]','[/list]','[list=]','[/list]','[img]','[/img]','[url]','[/url]','[flash=]', '[/flash]','[size=]','[/size]'{% for custom_tag in loops.custom_tags %}, {custom_tag.BBCODE_NAME}{% endfor %});
-	var imageTag = false;
-
-	// Helpline messages
+	// Helpline messages inject enhance
 	var help_line = {
 		b: '{LA_BBCODE_B_HELP}',
 		i: '{LA_BBCODE_I_HELP}',
@@ -38,21 +28,6 @@
 		{% for custom_tag in loops.custom_tags %}
 			,cb_{custom_tag.BBCODE_ID}: '{custom_tag.A_BBCODE_HELPLINE}'
 		{% endfor %}
-	}
-
-	function change_palette()
-	{
-		phpbb.toggleDisplay('colour_palette');
-		e = document.getElementById('colour_palette');
-
-		/*if (e.style.display == 'block')
-		{
-			document.getElementById('bbpalette').value = '{LA_FONT_COLOR_HIDE}';
-		}
-		else
-		{
-			document.getElementById('bbpalette').value = '{LA_FONT_COLOR}';
-		}*/
 	}
 
 // ]]>
